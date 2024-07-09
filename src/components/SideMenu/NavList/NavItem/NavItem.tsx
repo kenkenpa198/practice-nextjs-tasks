@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavItemProps {
   label: string;
@@ -14,10 +14,9 @@ export const NavItem: React.FC<NavItemProps> = ({ label, link, icon }) => {
   return (
     <Link
       href={link}
-      className={`flex p-4 items-center w-full hover:bg-gray-700 font-medium
-        ${
-          pathname === link ? "bg-gray-600 border-r-4 border-r-green-500" : ""
-        }`}
+      className={`flex w-full items-center p-4 font-medium hover:bg-gray-700 ${
+        pathname === link ? 'border-r-4 border-r-green-500 bg-gray-600' : ''
+      }`}
     >
       <div className="mr-1">{icon}</div>
       <div>{label}</div>
