@@ -7,9 +7,13 @@ import mongoose, { Document } from 'mongoose';
  * id の定義は不要。MongoDB ではデータ登録時に自動的に ID が付与されるため。
  */
 export interface Task {
+  /** タスクのタイトル */
   title: string;
+  /** タスクの詳細説明 */
   description: string;
+  /** タスクの期限日 */
   dueDate: string;
+  /** タスクが完了しているかどうか */
   isCompleted: boolean;
 }
 
@@ -22,8 +26,11 @@ export interface Task {
  * これに作成日と更新日のプロパティを追加している。
  */
 export interface TaskDocument extends Task, Document {
+  /** ドキュメントのユニークID */
   _id: string;
+  /** ドキュメントの作成日 */
   createdAt: Date;
+  /** ドキュメントの更新日 */
   updatedAt: Date;
 }
 
@@ -35,17 +42,21 @@ const taskSchema = new mongoose.Schema<TaskDocument>(
   // 第一引数: スキーマ定義オブジェクト
   // 各フィールドの名前とそのデータ型、オプション（必須かどうか、デフォルト値など）を指定する。
   {
+    /** タスクのタイトル */
     title: {
       type: String,
       required: true,
     },
+    /** タスクの詳細説明 */
     description: {
       type: String,
     },
+    /** タスクの期限日 */
     dueDate: {
       type: String,
       required: true,
     },
+    /** タスクが完了しているかどうか */
     isCompleted: {
       type: Boolean,
       default: false,
