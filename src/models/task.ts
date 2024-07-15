@@ -22,6 +22,7 @@ export interface Task {
  * これに作成日と更新日のプロパティを追加している。
  */
 export interface TaskDocument extends Task, Document {
+  _id: string;
   createdAt: Date;
   updatedAt: Date;
 }
