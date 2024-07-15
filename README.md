@@ -1,3 +1,17 @@
+# Practice - Next Tasks
+
+This application is a ToDo app created for practicing Next.js.
+
+## Reference
+
+- [【2024年最新】Next.jsフルスタックWebアプリケーション開発入門 | Udemy](https://www.udemy.com/course/nextjs-fullstack/)
+
+---
+
+Below is the default README
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
