@@ -29,7 +29,7 @@ export default async function MainPage() {
           href="/new"
           className="flex items-center gap-1 rounded-full border bg-gray-800 px-4 py-2 font-semibold text-white shadow-sm hover:bg-gray-700"
         >
-          <MdAddTask className="site-5" />
+          <MdAddTask className="size-5" />
           <div>Add Task</div>
         </Link>
       </header>
