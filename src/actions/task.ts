@@ -53,7 +53,7 @@ export const updateTask = async (
   state: FormState,
   formData: FormData,
 ) => {
-  const newTask: Task = {
+  const updateTask: Task = {
     title: formData.get('title') as string,
     description: formData.get('description') as string,
     dueDate: formData.get('dueDate') as string,
