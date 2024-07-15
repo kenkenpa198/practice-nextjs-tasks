@@ -2,6 +2,10 @@
 
 This application is a ToDo app created for practicing Next.js.
 
+## Deploy
+
+- [Next Tasks](https://practice-nextjs-tasks.vercel.app/)
+
 ## Reference
 
 - [【2024年最新】Next.jsフルスタックWebアプリケーション開発入門 | Udemy](https://www.udemy.com/course/nextjs-fullstack/)
