@@ -72,3 +72,24 @@ export const updateTask = async (
   // 処理が成功したらルートへリダイレクトさせる
   redirect('/');
 };
+
+/**
+ * タスクを削除する非同期関数。
+ *
+ * @param id - 削除対象のタスクの ID 。
+ * @param state - FormState 型のオブジェクト。エラーメッセージを含む。
+ * @returns エラーが発生した場合、FormState 型のオブジェクトを返す。
+ */
+export const deleteTask = async (id: string, state: FormState) => {
+  // DB 接続とタスク作成時にエラーが発生した場合はエラーメッセージを state に設定して返却する
+  try {
+    await connectDb();
+    await TaskModel.deleteOne({ _id: id });
+  } catch (error) {
+    state.error = 'タスクの削除に失敗しました';
+    return state;
+  }
+
+  // 処理が成功したらルートへリダイレクトさせる
+  redirect('/');
+};
