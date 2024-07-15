@@ -6,7 +6,7 @@ export default function MainPage() {
   return (
     <div className="pg-24 h-full overflow-y-auto p-8 text-gray-800">
       <header className="flex items-center justify-between">
-        <h1 className="txt-2xl flex items-center font-bold">All Tasks</h1>
+        <h1 className="flex items-center text-2xl font-bold">All Tasks</h1>
         <Link
           href="/new"
           className="flex items-center gap-1 rounded-full border bg-gray-800 px-4 py-2 font-semibold text-white shadow-sm hover:bg-gray-700"
