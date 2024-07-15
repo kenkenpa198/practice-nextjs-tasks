@@ -20,7 +20,6 @@ const getAllTasks = async (): Promise<TaskDocument[]> => {
 export default async function MainPage() {
   // タスク一覧を取得する
   const allTasks = await getAllTasks();
-  console.log(allTasks);
 
   return (
     <div className="pg-24 h-full overflow-y-auto p-8 text-gray-800">
@@ -36,7 +35,9 @@ export default async function MainPage() {
       </header>
 
       <div className="mt-8 flex flex-wrap gap-4">
-        <TaskCard />
+        {allTasks.map((task) => (
+          <TaskCard key={task._id} task={task} />
+        ))}
       </div>
     </div>
   );
