@@ -4,7 +4,7 @@ This application is a ToDo app created for practicing Next.js.
 
 ## Deploy
 
-- [Next Tasks](https://practice-nextjs-tasks.vercel.app/)
+- ~~[Next Tasks](https://practice-nextjs-tasks.vercel.app/)~~ Currently not available.
 
 ## Reference
 
